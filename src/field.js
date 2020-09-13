@@ -14,9 +14,7 @@ export class Field {
 
     this.field = document.querySelector(".game_field");
     this.fieldRect = this.field.getBoundingClientRect();
-    // this.onClick = this.onClick.bind(this);  binding1
     this.field.addEventListener("click", this.onClick);
-    //this.field.addEventListener("click", (event) => this.onClick()); binding2
   }
 
   setClickListner(onItemClick) {
@@ -24,7 +22,6 @@ export class Field {
   }
 
   onClick = (event) => {
-    // binding 3
     const target = event.target;
     if (target.matches(".star")) {
       target.remove();
